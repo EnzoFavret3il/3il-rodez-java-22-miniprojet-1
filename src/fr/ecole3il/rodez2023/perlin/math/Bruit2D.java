@@ -35,6 +35,19 @@ public abstract class Bruit2D {
     public long getGraine() {
         return graine;
     }
+    /**Methode permettant d'obtenir la valeur de la résolution
+     * Methode permettant de modifier la valeur de la resolution
+     * @return la résolution type double
+     * 
+     * */
+    public double getResolution() {
+    	return resolution;
+    }
 
+	public void setResolution(double resolution) {
+		this.resolution = resolution;
+	}
+    
+    
 
 }
