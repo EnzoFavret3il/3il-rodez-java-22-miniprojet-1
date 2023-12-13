@@ -53,6 +53,11 @@ public class Utils {
     	// Bon, je le ferai plus tard, je vais réviser l'espagnol
     	// Je mets ça, ça marchera bien en attendant
     	// tant pis
+    	
+    	//Bon du coup  je l'ai fait car why not
+    	
+    	
+    	
         return tab;
     }
 
