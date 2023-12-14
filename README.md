@@ -8,3 +8,7 @@ Les attributs et les méthodes ne seront pas différentes de la classe terrain. 
 On va préférer une classe Terrain avec une enum des différents terrains pour différencier chaque objet de la même classe
 
 La modélisation se trouve en racine du projet
+
+Terrain
+
+On va utiliser un type double pour ces données
