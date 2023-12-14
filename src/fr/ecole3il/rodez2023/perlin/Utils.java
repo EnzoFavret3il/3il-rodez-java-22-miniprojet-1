@@ -56,7 +56,13 @@ public class Utils {
     	
     	//Bon du coup  je l'ai fait car why not
     	
-    	
+    	Random random = new Random(seed);
+    	for(int i=0;i<tab.length; i++) {
+    		int randomval = random.nextInt(i);
+    		int randomelement=tab[randomval];
+    		tab[randomval]=tab[i];
+    		tab[i]=randomelement;
+    	}
     	
         return tab;
     }
