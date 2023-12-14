@@ -27,8 +27,10 @@ public class TypeTerrain {
 	 * @throws Exception */
 	public TypeTerrain(double hydrometrie, double altitude, double temperature, Terrain type, BufferedImage image) throws Exception {
 		super();
+		/**Check si les valeurs sont correctes
+		 * @MauvaiseValeurException --> exception de la classe MauvaiseValeurException*/
 		if(!badvalues(hydrometrie,0,1)||!badvalues(altitude,-1,1)||!badvalues(temperature,0,1)) {
-			throw new Exception("Les valeurs ne sont pas correctes");
+			throw new MauvaiseValeurException("Les valeurs ne sont pas correctes");
 		}
 		else {
 			this.hydrometrie = hydrometrie;
