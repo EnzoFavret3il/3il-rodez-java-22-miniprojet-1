@@ -23,16 +23,23 @@ public class TypeTerrain {
 	
 	
 	
-	
-	public TypeTerrain(double hydrometrie, double altitude, double temperature, Terrain type, BufferedImage image) {
+	/**Constructeur pour l'objet TypeTerrain
+	 * @throws Exception */
+	public TypeTerrain(double hydrometrie, double altitude, double temperature, Terrain type, BufferedImage image) throws Exception {
 		super();
-		this.hydrometrie = hydrometrie;
-		this.altitude = altitude;
-		this.temperature = temperature;
-		Type = type;
-		this.image = image;
+		if(!badvalues(hydrometrie,0,1)||!badvalues(altitude,-1,1)||!badvalues(temperature,0,1)) {
+			throw new Exception("Les valeurs ne sont pas correctes");
+		}
+		else {
+			this.hydrometrie = hydrometrie;
+			this.altitude = altitude;
+			this.temperature = temperature;
+			Type = type;
+			this.image = image;
+		}
+		
 	}
-	/**Getter pour les variables */
+	/**Getters pour les variables */
 	public double getHydrometrie() {
 		return hydrometrie;
 	}
@@ -48,8 +55,16 @@ public class TypeTerrain {
 	public BufferedImage getImage() {
 		return image;
 	}
-	
-	
+	/**Petite fonction pour vérifier les valeurs hydro, temp et alititude
+	 * Merci StackOverflow
+	 * @param attribut => hydrometrie, temperature ou altitude
+	 * @param min => valeur minimum
+	 * @param max=> valeur max
+	 * @return boolean yes/no après vérification des infos
+	 * */
+	private boolean badvalues(double attribut, double min, double max) {
+		return attribut>= min && attribut <=max;
+	}
 
 	
 	
