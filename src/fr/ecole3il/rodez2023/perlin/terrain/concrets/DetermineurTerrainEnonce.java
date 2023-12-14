@@ -1,48 +1,48 @@
 package fr.ecole3il.rodez2023.perlin.terrain.concrets;
 
-import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
+import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 
 public class DetermineurTerrainEnonce implements DetermineurTerrain {
 
 	@Override
-	public TypeTerrain determinerTerrain(double altitude, double hydrometrie, double temperature) {
+	public Terrain determinerTerrain(double altitude, double hydrometrie, double temperature) {
 		if (altitude < 0) {
-			return TypeTerrain.OCEAN;
+			return Terrain.OCEAN;
 		} else if (hydrometrie <= 0.25) {
 			if (altitude <= 0.7) {
 				if (temperature <= 0.25) {
-					return TypeTerrain.PLAINE;
+					return Terrain.PLAINE;
 				} else if (temperature <= 0.7) {
-					return TypeTerrain.FORET_FEUILLUS;
+					return Terrain.FORET_FEUILLUS;
 				} else {
-					return TypeTerrain.TOUNDRA;
+					return Terrain.TOUNDRA;
 				}
 			} else {
 				if (temperature <= 0.25) {
-					return TypeTerrain.PLAINE;
+					return Terrain.PLAINE;
 				} else if (temperature <= 0.7) {
-					return TypeTerrain.FORET_CONIFÈRES;
+					return Terrain.FORET_CONIFÈRES;
 				} else {
-					return TypeTerrain.MONTAGNE;
+					return Terrain.MONTAGNE;
 				}
 			}
 		} else {
 			if (altitude <= 0.7) {
 				if (temperature <= 0.25) {
-					return TypeTerrain.DESERT;
+					return Terrain.DESERT;
 				} else if (temperature <= 0.7) {
-					return TypeTerrain.COLLINES;
+					return Terrain.COLLINES;
 				} else {
-					return TypeTerrain.MONTAGNE;
+					return Terrain.MONTAGNE;
 				}
 			} else {
 				if (temperature <= 0.25) {
-					return TypeTerrain.MARAIS;
+					return Terrain.MARAIS;
 				} else if (temperature <= 0.7) {
-					return TypeTerrain.FORET_CONIFÈRES;
+					return Terrain.FORET_CONIFÈRES;
 				} else {
-					return TypeTerrain.MONTAGNE;
+					return Terrain.MONTAGNE;
 				}
 			}
 		}

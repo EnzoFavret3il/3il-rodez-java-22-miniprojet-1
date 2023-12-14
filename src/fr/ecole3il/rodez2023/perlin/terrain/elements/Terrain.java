@@ -10,7 +10,7 @@ enum Terrain{
 	Ocean,
 	Plaine,
 	Toundra}
-public class TypeTerrain {
+public class Terrain {
 	/**@param hydrometrie Hydrometrie du terrain
 	 * @param altitude altitude du terrain
 	 * @param température du terrain (du biome)
@@ -25,7 +25,7 @@ public class TypeTerrain {
 	
 	/**Constructeur pour l'objet TypeTerrain
 	 * @throws Exception */
-	public TypeTerrain(double hydrometrie, double altitude, double temperature, Terrain type, BufferedImage image) throws Exception {
+	public Terrain(double hydrometrie, double altitude, double temperature, Terrain type, BufferedImage image) throws Exception {
 		super();
 		/**Check si les valeurs sont correctes
 		 * @MauvaiseValeurException --> exception de la classe MauvaiseValeurException*/

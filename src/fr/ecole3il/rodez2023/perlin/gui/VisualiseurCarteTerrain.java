@@ -24,7 +24,7 @@ import javax.swing.SwingUtilities;
 import fr.ecole3il.rodez2023.perlin.terrain.carte.Carte;
 import fr.ecole3il.rodez2023.perlin.terrain.carte.ManipulateurCarte;
 import fr.ecole3il.rodez2023.perlin.terrain.concrets.VisualiseurTerrainEnonce;
-import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
+import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurAleatoire;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurPerlin;
 
@@ -58,7 +58,7 @@ public class VisualiseurCarteTerrain extends JFrame {
 
         for (int y = 0; y < hauteur; y++) {
             for (int x = 0; x < largeur; x++) {
-                TypeTerrain type = vte.getTypeTerrain(x, y);
+                Terrain type = vte.getTypeTerrain(x, y);
                 BufferedImage image = type.getImage();
                 g.drawImage(image, x * tuileWidth, y * tuileHeight, tuileWidth, tuileHeight, null);
             }
@@ -94,7 +94,7 @@ public class VisualiseurCarteTerrain extends JFrame {
 		        System.out.println("Coordonnées de la souris - X: " + x + ", Y: " + y);
 
 		        if (x >= 0 && x < carte.getLargeur() && y >= 0 && y < carte.getHauteur()) {
-		            TypeTerrain type = vte.getTypeTerrain(x, y);
+		            Terrain type = vte.getTypeTerrain(x, y);
 		            terrainLabel.setText("Terrain: " + type.toString());
 		        }
 		    }
