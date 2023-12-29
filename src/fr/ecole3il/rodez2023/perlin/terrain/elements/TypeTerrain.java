@@ -15,11 +15,18 @@ public enum TypeTerrain {
 	Tundra("tundra.png");
 	/**@nomfichier attribut pour le nom du fichier*/
 	 private String nomfichier;
-
+	 /**Constructeur de classe*/
 	 private TypeTerrain(String nomfichier) {
 		 this.nomfichier=nomfichier;
 	 }
 	public BufferedImage getImage() {
 		return Utils.chargerTuile(nomfichier);
 	}
+	@Override
+	/**{@return} valeur que le toString doit retourner
+	 * @name() !C'est incroyable comme méthode*/
+	public String toString() {
+		return "You're in a "+name()+ "biome";
+	}
+	
 }
