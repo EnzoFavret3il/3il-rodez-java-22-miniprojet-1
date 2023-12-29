@@ -3,7 +3,7 @@ package fr.ecole3il.rodez2023.perlin.terrain.elements;
 import java.awt.image.BufferedImage;
 
 import fr.ecole3il.rodez2023.perlin.Utils;
-
+/**@TypeTerrain Enum des biomes dispo avec leurs nom fichier png*/
 public enum TypeTerrain {
 	Coniferous_forest("coniferouse_forest.png"),
 	Deciduous_forest("deciduous_forest.png"),
@@ -13,8 +13,8 @@ public enum TypeTerrain {
 	Ocean("ocean.png"),
 	Plain("plain.png"),
 	Tundra("tundra.png");
-	
-	 private final String nomfichier;
+	/**@nomfichier attribut pour le nom du fichier*/
+	 private String nomfichier;
 
 	 private TypeTerrain(String nomfichier) {
 		 this.nomfichier=nomfichier;
