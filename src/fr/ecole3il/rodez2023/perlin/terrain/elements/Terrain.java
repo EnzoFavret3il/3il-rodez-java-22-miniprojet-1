@@ -1,15 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 import java.awt.image.BufferedImage;
-enum Terrain{
-	Collines, 
-	Desert,
-	Foret_de_Coniferes,
-	Foret_de_Feuillus,
-	Marais,
-	Montagne,
-	Ocean,
-	Plaine,
-	Toundra}
 public class Terrain {
 	/**@param hydrometrie Hydrometrie du terrain
 	 * @param altitude altitude du terrain
@@ -18,26 +8,23 @@ public class Terrain {
 	private double hydrometrie;
 	private double altitude;
 	private double temperature;
-	private Terrain Type;
-	private BufferedImage image= new BufferedImage( 2,3,5);
 	
 	
 	
-	/**Constructeur pour l'objet TypeTerrain
+	
+	/**Constructeur pour l'objet Terrain
 	 * @throws Exception */
-	public Terrain(double hydrometrie, double altitude, double temperature, Terrain type, BufferedImage image) throws Exception {
+	public Terrain(double hydrometrie, double altitude, double temperature) throws Exception {
 		super();
 		/**Check si les valeurs sont correctes
 		 * @MauvaiseValeurException --> exception de la classe MauvaiseValeurException*/
 		if(!badvalues(hydrometrie,0,1)||!badvalues(altitude,-1,1)||!badvalues(temperature,0,1)) {
-			throw new MauvaiseValeurException("Les valeurs ne sont pas correctes");
+			throw new MauvaiseValeurException("Une ou plusieurs valeurs sont incorrectes, veuillez vérifier vos données");
 		}
 		else {
 			this.hydrometrie = hydrometrie;
 			this.altitude = altitude;
 			this.temperature = temperature;
-			Type = type;
-			this.image = image;
 		}
 		
 	}
@@ -51,12 +38,7 @@ public class Terrain {
 	public double getTemperature() {
 		return temperature;
 	}
-	public Terrain getType() {
-		return Type;
-	}
-	public BufferedImage getImage() {
-		return image;
-	}
+
 	/**Petite fonction pour vérifier les valeurs hydro, temp et alititude
 	 * Merci StackOverflow
 	 * @param attribut => hydrometrie, temperature ou altitude
