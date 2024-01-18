@@ -5,14 +5,15 @@ import java.awt.image.BufferedImage;
 import fr.ecole3il.rodez2023.perlin.Utils;
 /**@TypeTerrain Enum des biomes dispo avec leurs nom fichier png*/
 public enum TypeTerrain {
-	Coniferous_forest("coniferouse_forest.png"),
-	Deciduous_forest("deciduous_forest.png"),
-	Desert("desert.png"),
-	Hills("hills.png"),
-	Mountain("mountain.png"),
-	Ocean("ocean.png"),
-	Plain("plain.png"),
-	Tundra("tundra.png");
+	Coniferous_forest("data/coniferouse_forest.png"),
+	Deciduous_forest("data/deciduous_forest.png"),
+	Desert("data/desert.png"),
+	Hills("data/hills.png"),
+	Mountain("data/mountain.png"),
+	Marsh("data/marsh.png"),
+	Ocean("data/ocean.png"),
+	Plain("data/plain.png"),
+	Tundra("data/tundra.png");
 	/**@nomfichier attribut pour le nom du fichier*/
 	 private String nomfichier;
 	 /**Constructeur de classe*/
