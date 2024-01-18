@@ -16,3 +16,5 @@ Terrain
 On va utiliser un type double pour ces données
 
 On souhaites sortir ce bout d'alorithme de la classe afin d'améliorer la conception du programme. Cette amélioration rendra le code plus flexible aux modifications et à l'ajout de nouveau code. 
+
+Je suis la carte 
