@@ -1,6 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
 public interface DetermineurTerrain {
+	/**@void chaque void correspond aux méthodes de chaque terrains*/
 	void visiterConiferousForest(TypeTerrain coniferousForest);
 	void visiterDeciduousForest(TypeTerrain deciduousForest);
 	void visiterDesert(TypeTerrain desert);

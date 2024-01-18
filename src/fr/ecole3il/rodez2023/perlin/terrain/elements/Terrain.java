@@ -50,6 +50,65 @@ public class Terrain {
 		return attribut>= min && attribut <=max;
 	}
 
+	public TypeTerrain getTypeTerrain(DetermineurTerrain dt) {
+        double altitude = this.getAltitude();
+        double hydrometrie = this.getHydrometrie();
+        double temperature = this.getTemperature();
+
+        if (altitude < 0) {
+            dt.visiterOcean(TypeTerrain.Ocean);
+            return TypeTerrain.Ocean;
+        } else if (hydrometrie <= 0.25) {
+            if (altitude <= 0.7) {
+                if (temperature <= 0.25) {
+                    dt.visiterPlain(TypeTerrain.Plain);
+                    return TypeTerrain.Plain;
+                } else if (temperature <= 0.7) {
+                    dt.visiterDeciduousForest(TypeTerrain.Deciduous_forest);
+                    return TypeTerrain.Deciduous_forest;
+                } else {
+                    dt.visiterTundra(TypeTerrain.Tundra);
+                    return TypeTerrain.Tundra;
+                }
+            } else {
+                if (temperature <= 0.25) {
+                    dt.visiterPlain(TypeTerrain.Plain);
+                    return TypeTerrain.Plain;
+                } else if (temperature <= 0.7) {
+                    dt.visiterConiferousForest(TypeTerrain.Coniferous_forest);
+                    return TypeTerrain.Coniferous_forest;
+                } else {
+                    dt.visiterMountain(TypeTerrain.Mountain);
+                    return TypeTerrain.Mountain;
+                }
+            }
+        } else {
+            if (altitude <= 0.7) {
+                if (temperature <= 0.25) {
+                    dt.visiterDesert(TypeTerrain.Desert);
+                    return TypeTerrain.Desert;
+                } else if (temperature <= 0.7) {
+                    dt.visiterHills(TypeTerrain.Hills);
+                    return TypeTerrain.Hills;
+                } else {
+                    dt.visiterMountain(TypeTerrain.Mountain);
+                    return TypeTerrain.Mountain;
+                }
+            } else {
+                if (temperature <= 0.25) {
+                    dt.visiterMarsh(TypeTerrain.Marsh);
+                    return TypeTerrain.Marsh;
+                } else if (temperature <= 0.7) {
+                    dt.visiterConiferousForest(TypeTerrain.Coniferous_forest);
+                    return TypeTerrain.Coniferous_forest;
+                } else {
+                    dt.visiterMountain(TypeTerrain.Mountain);
+                    return TypeTerrain.Mountain;
+                }
+            }
+        }
+    }
+
 	
 	
 }

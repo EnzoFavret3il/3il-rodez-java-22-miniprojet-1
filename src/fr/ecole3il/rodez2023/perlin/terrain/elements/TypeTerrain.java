@@ -29,5 +29,6 @@ public enum TypeTerrain {
 	public String toString() {
 		return "You're in a "+name()+ "biome";
 	}
+
 	
 }
