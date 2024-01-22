@@ -1,10 +1,30 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
 public class Carte {
+	/**@nom --> nom de la carte
+	 * @largeur --> largeur carte
+	 * @hauteur -->hauteur de la carte
+	 * @tab --> tableau a deux dimensions, représentation x y de la carte aka bataille navale*/
 	private String nom;
 	private double largeur;
 	private double hauteur;
-	private Terrain tab;
+	private Terrain[][] tab;
+	
+	/**@getNom,
+	 * @getLargeur,
+	 * @getHauteur
+	 * Méthodes permettant de récupérer les valeurs sur la carte ainsi que le nom de celle-ci
+	 * */
+	public String getNom() {
+		return nom;
+	}
+	public double getLargeur() {
+		return largeur;
+	}
+	public double getHauteur() {
+		return hauteur;
+	}
+	
 	
 	
 }
