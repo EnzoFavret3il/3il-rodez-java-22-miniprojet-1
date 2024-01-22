@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
-
+/**@author EnzoFavret*/
 public class Carte {
 	/**@nom --> nom de la carte
 	 * @largeur --> largeur carte
@@ -12,7 +12,7 @@ public class Carte {
 	
 	/**@getNom,
 	 * @getLargeur,
-	 * @getHauteur
+	 * @getHauteur,
 	 * Méthodes permettant de récupérer les valeurs sur la carte ainsi que le nom de celle-ci
 	 * */
 	public String getNom() {
@@ -23,6 +23,10 @@ public class Carte {
 	}
 	public double getHauteur() {
 		return hauteur;
+	}
+	
+	public Terrain getTerrain(int x, int y) {
+		
 	}
 	
 	
