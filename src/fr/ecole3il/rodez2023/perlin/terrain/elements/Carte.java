@@ -49,7 +49,9 @@ public class Carte {
 		this.hauteur = hauteur;
 		this.generateurCarte=generateurCarte;
 	}
-	
+	/**@Carte Constructeur supplémentaire 
+	 * récupère les "Métadonnées" de la chaine de caractères 
+	 * */
 	public Carte(String donnesCarte) {
 		Scanner scanner = new Scanner(donnesCarte);
 		this.nom = scanner.nextLine();
