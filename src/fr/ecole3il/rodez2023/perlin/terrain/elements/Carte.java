@@ -25,8 +25,11 @@ public class Carte {
 		return hauteur;
 	}
 	
-	public Terrain getTerrain(int x, int y) {
-		
+	public Terrain getTerrain(int x, int y) throws TerrainInexistant {
+		if(x<0 || x>=tab.length || y<0 || y>=tab[0].length) {
+			throw new TerrainInexistant("Hors des limites du tableau");
+		}
+		return tab[x][y];
 	}
 	
 	
