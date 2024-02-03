@@ -1,5 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
+import java.util.Scanner;
+
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurCarte;
 
 /**@author EnzoFavret*/
@@ -35,6 +37,11 @@ public class Carte {
 		}
 		return tab[x][y];
 	}
+	/** Constructeur de carte
+	 * @nom nom de la carte
+	 * @largeur de la carte
+	 * @hauteur de la carte
+	 * @generateurCarte ???*/
 	public Carte(String nom, double largeur, double hauteur, GenerateurCarte generateurCarte) {
 		super();
 		this.nom = nom;
@@ -43,6 +50,19 @@ public class Carte {
 		this.generateurCarte=generateurCarte;
 	}
 	
+	public Carte(String donnesCarte) {
+		Scanner scanner = new Scanner(donnesCarte);
+		this.nom = scanner.nextLine();
+		this.largeur = scanner.nextDouble();
+		this.hauteur= scanner.nextDouble();
+		
+		while(scanner.hasNext()) {
+			double altitude = scanner.nextDouble();
+			double hydrometrie = scanner.nextDouble();
+			double temperature=scanner.nextDouble();
+			
+		}
+	}
 	
 	
 }
