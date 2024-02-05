@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.gui;
-
+import fr.ecole3il.rodez2023.perlin.terrain.carte.Carte;
 import java.awt.BorderLayout;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;

@@ -1,7 +1,9 @@
-package fr.ecole3il.rodez2023.perlin.terrain.elements;
+package fr.ecole3il.rodez2023.perlin.terrain.carte;
 
 import java.util.Scanner;
 
+import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
+import fr.ecole3il.rodez2023.perlin.terrain.elements.TerrainInexistant;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurCarte;
 
 /**@author EnzoFavret*/
